@@ -4,7 +4,7 @@ document.getElementById("logout").addEventListener("click", async () => {
   localStorage.removeItem('Token')
   localStorage.removeItem('name')
 
-  window.location.href = "/dokter";
+  window.location.href = "/";
 })
 
 document.getElementById("riwayat").addEventListener("click", async () => {
@@ -46,7 +46,7 @@ $.ajax({
                   </div>
                 </div>
                 <center>
-                  <a href="#" class="btn btn-success">Lihat Diagnosa</a>
+                <a class="btn btn-success" onclick="pilih(${data.id_rekam_medis})" style="color: white;">Lihat Diagnosa</a>
                 </center>
               </div>
             </div>`)
@@ -75,7 +75,7 @@ $.ajax({
               </div>
             </div>
             <center>
-              <a class="btn btn-success" onclick="pilih(${data.id_rekam_medis})">Lihat Diagnosa</a>
+              <a class="btn btn-success" onclick="pilih(${data.id_rekam_medis})" style="color: white;">Lihat Diagnosa</a>
             </center>
           </div>
         </div>`)
